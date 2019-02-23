@@ -30,7 +30,6 @@ sum-up-numbers-general([First|Rest],Sum) :-
     sum-up-numbers-general(Rest, Sum).
 
 % 3. PREDICATE TO FIND THE MIN IN L1 BIGGER THAN THE MIN IN L2
-
 min-above-min(L1, L2, N) :-
 %Find the min in L2 with findMin 
 findMin(L2, Min2),
