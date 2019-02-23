@@ -11,6 +11,8 @@ sum-up-numbers-simple([First|Rest], Sum1) :-
 \+(number(First)),
 sum-up-numbers-simple(Rest, Sum1).
 
+% To Run Predicate 1 successfully, use ',!.' (Ex. sum-up-numbers-simple([], 0),!.)
+
 % 2. PREDICATE TO SUM NUMBERS IN A LIST INCLUDING NESTED
 % Base Case list is not empty.
 sum-up-numbers-general([], 0).
