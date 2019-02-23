@@ -51,3 +51,17 @@ First < Min1.
 findMin([First|Rest], Min1) :-
 findMin(Rest, Min1), 
 First >= Min1.
+
+% 4. PREDICATE TO FIND COMMON ELEMENTS IN DIFFERENT LISTS
+% Base Case where all lists are empty
+common-unique-elements([],[],[]).
+common-unique-elements([], [a,b,c,d,e], []).
+common-unique-elements([a,b,c,d,e], [], []).
+common-unique-elements([a], [a], [a]).
+common-unique-elements([[[a]]], [a], [a]).
+common-unique-elements([a,b], [b,a], [a,b]).
+common-unique-elements([a,b], [b,c,a], [a,b]).
+common-unique-elements([a,c,b], [a,b], [a,b]).
+common-unique-elements([a,9,b,8,c,13,d,6,e,20], [2,e,3,d,4,c,5,b,6,a,7], [a,b,c,d,6,e] ).
+common-unique-elements([a,9,[b,8,c],[13,[[d],6],e,20]], [2,e,[3,d,4],[c,[[5],[b],[[6]]],a],7], [a,b,c,d,6,e]).
+
